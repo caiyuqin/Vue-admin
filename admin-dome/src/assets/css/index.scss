@@ -1,0 +1,156 @@
+@import './basic.scss';
+body,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+dl,
+dd,
+form,
+input,
+textarea,
+select {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  font-family: "微软雅黑";
+  line-height: 1;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+i {
+  font-style: normal;
+}
+
+img {
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 12px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+  /*IE/7/6*/
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.app-wrapper {
+  @include prefix-val(display, flex);
+  .navleft {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: #e1e9ee;
+    ul {
+      background: #e1e9ee;
+    }
+  }
+  .rightContent {
+    @include prefix-key(flex, 1);
+    margin-left: 200px;
+    .hamburger-container {
+      line-height: 50px;
+      height: 100%;
+      .bam-icon {
+        width: 30px;
+        height: 30px;
+        vertical-align: middle;
+      }
+    }
+  }
+  .nav-bar{
+    padding-left: 10px;
+    border-bottom:1px solid #ccc;
+  }
+  .svg-icon {
+    width: 15px;
+    height: 15px;
+  }
+  .breadcrumb {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 50px;
+  }
+  .rightMenu {
+    line-height: 50px;
+    &>div {
+      text-align: center;
+    }
+    .magnify-icon,
+    .language-icon {
+      width: 25px;
+      height: 25px;
+      vertical-align: middle;
+    }
+    .el-color-picker{
+      vertical-align:middle;
+    }
+  }
+  .tags-view-container{
+    padding-left: 10px;
+    border-bottom:1px solid #ccc;
+    .tags-view{
+      margin:5px 0;
+    }
+    .tags-view-item{
+      display:inline-block;
+      line-height:30px;
+      background:#42b983;
+      padding: 0 20px;
+      color:#fff;
+      &::before{
+        content: '';
+        background: #fff;
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 2px;
+      }
+    }
+    .close-icon{
+      vertical-align:middle;
+    }
+  }
+  .el-progress-bar__outer{
+    margin:10px 0;
+  }
+}
