@@ -36,10 +36,11 @@ export default {
     };
   },
   mounted() {
+    let _this=this;
     this.initCharts();
     this.__resizeHanlder = debounce(() => {
-      if (this.chart) {
-        this.chart.resize();
+      if (_this.chart) {
+        _this.chart.resize();
       }
     }, 100);
     window.addEventListener("resize", this.__resizeHanlder);

@@ -3,10 +3,10 @@
     <home-tit></home-tit>
     <el-row class="bcg-normal">
      <el-row class="bcg-white">
-       <line-echarts></line-echarts> 
+       <!-- <line-echarts></line-echarts>  -->
      </el-row>
     </el-row>
-    <el-row class="pad">
+    <!-- <el-row class="pad">
         <el-col :sm="24" :xs="24" :lg="8" style="padding:10px">
           <div class="bcg-white">
               <pie-echarts></pie-echarts>
@@ -22,8 +22,8 @@
               <bar-eacharts></bar-eacharts>
           </div>
         </el-col>    
-    </el-row>
-    <el-row  class="pad">
+    </el-row> -->
+    <el-row  class="pad" style="width:100%">
       <el-col :sm="24" :xs="24" :lg="9" style="padding:10px">
           <div class="bcg-white">
               <transaction-table></transaction-table>

@@ -1,6 +1,6 @@
 const Mock = require('mockjs');
 var data = Mock.mock(/\.json/,{
-    'list|7': [{
+    'list|10': [{
         "order_no": '@guid()',
         "timestamp": +Mock.Random.date('T'),
         "username": '@name()',

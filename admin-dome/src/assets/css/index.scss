@@ -70,6 +70,9 @@ a:hover {
 }
 
 .app-wrapper {
+  .content-box{
+    width:100%;
+  }
   @include prefix-val(display, flex);
   .navleft {
     width: 200px;

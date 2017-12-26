@@ -5,9 +5,10 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import App from './App'
 import axios from "axios"
+
+import router from './router'
 import stores from './store'
 import Loading from "./components/Loading"
-import router from './router'
 import Icon from 'vue-svg-icon/Icon.vue';
 Vue.component('icon', Icon);
 
@@ -18,16 +19,7 @@ Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(Loading)
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  store:stores,
-  router,
-  template: '<App/>',
-  components: {
-    App
-  }
-})
+
 
 
 // 添加请求拦截器
@@ -48,3 +40,14 @@ axios.interceptors.response.use(function (response) {
   // 对响应错误做点什么
   return Promise.reject(error);
 });
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  store:stores,
+  router,
+  template: '<App/>',
+  components: {
+    App
+  }
+})

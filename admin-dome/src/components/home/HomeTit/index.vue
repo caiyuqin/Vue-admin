@@ -1,7 +1,7 @@
 <template>
   <div class="home-tit">
     <el-row>
-        <el-col :span="6" :xs="12">
+        <el-col :span="6" :xs="12" :sm="12">
             <div class="home-tit-box">
                 <div class="icon">
                    <div class="icon-box">
@@ -14,7 +14,7 @@
                 </div>
             </div>
         </el-col>
-        <el-col :span="6" :xs="12">
+        <el-col :span="6" :xs="12" :sm="12">
             <div class="home-tit-box">
                 <div class="icon">
                    <div class="icon-box">
@@ -27,7 +27,7 @@
                 </div>
             </div>
         </el-col>
-        <el-col :span="6" :xs="12">
+        <el-col :span="6" :xs="12" :sm="12">
             <div class="home-tit-box">
                 <div class="icon">
                    <div class="icon-box">
@@ -40,7 +40,7 @@
                 </div>
             </div>
         </el-col>
-        <el-col :span="6" :xs="12">
+        <el-col :span="6" :xs="12" :sm="12">
             <div class="home-tit-box">
                 <div class="icon">
                    <div class="icon-box">
