@@ -5,7 +5,7 @@
 <script>
 // 引入 ECharts 主模块
 var echarts = require("echarts/lib/echarts");
-import { debounce } from '@/utils'
+import { debounce } from "@/utils";
 // 引入柱状图
 require("echarts/lib/chart/line");
 // 引入提示框和标题组件
@@ -43,10 +43,18 @@ export default {
   mounted() {
     this.initCharts();
   },
+  watch: {
+    chartData: {
+      deep: true,
+      handler(val) {
+        this.setOptions(val);
+      }
+    }
+  },
   methods: {
     initCharts() {
       this.chart = echarts.init(this.$el);
-      this.setOptions();
+      this.setOptions(this.chartData);
       this.__resizeHanlder = debounce(() => {
         if (this.chart) {
           this.chart.resize();
@@ -62,7 +70,7 @@ export default {
       this.chart.dispose();
       this.chart = null;
     },
-    setOptions() {
+    setOptions({ expectedData, actualData } = {}) {
       this.chart.setOption({
         tooltip: {
           trigger: "axis"
@@ -101,7 +109,7 @@ export default {
             name: "expected",
             type: "line",
             stack: "总量",
-            data: [210, 250, 101, 90, 456, 110, 210],
+            data: expectedData,
             itemStyle: {
               normal: {
                 color: "#3888fa",
@@ -119,7 +127,7 @@ export default {
             name: "actual",
             type: "line",
             stack: "总量",
-            data: [220, 450, 400, 450, 80, 330, 310],
+            data: actualData,
             itemStyle: {
               normal: {
                 color: "#FF005A",

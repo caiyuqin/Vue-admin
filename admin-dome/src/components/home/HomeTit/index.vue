@@ -1,8 +1,8 @@
 <template>
   <div class="home-tit">
     <el-row>
-        <el-col :span="6" :xs="12" :sm="12">
-            <div class="home-tit-box">
+        <el-col :lg="6" :xs="12" :sm="12">
+            <div class="home-tit-box" @click="lineData('newVisitis')">
                 <div class="icon">
                    <div class="icon-box">
                         <icon name="home_person" class="home_person_icon"></icon>
@@ -14,8 +14,8 @@
                 </div>
             </div>
         </el-col>
-        <el-col :span="6" :xs="12" :sm="12">
-            <div class="home-tit-box">
+        <el-col :lg="6" :xs="12" :sm="12">
+            <div class="home-tit-box" @click="lineData('messages')">
                 <div class="icon">
                    <div class="icon-box">
                         <icon name="home_message" class="home_person_icon"></icon>
@@ -27,8 +27,8 @@
                 </div>
             </div>
         </el-col>
-        <el-col :span="6" :xs="12" :sm="12">
-            <div class="home-tit-box">
+        <el-col :lg="6" :xs="12" :sm="12">
+            <div class="home-tit-box" @click="lineData('purchases')">
                 <div class="icon">
                    <div class="icon-box">
                         <icon name="home_rmb" class="home_person_icon"></icon>
@@ -40,8 +40,8 @@
                 </div>
             </div>
         </el-col>
-        <el-col :span="6" :xs="12" :sm="12">
-            <div class="home-tit-box">
+        <el-col :lg="6" :xs="12" :sm="12">
+            <div class="home-tit-box" @click="lineData('shoppings')">
                 <div class="icon">
                    <div class="icon-box">
                         <icon name="home_cart" class="home_person_icon"></icon>
@@ -56,6 +56,18 @@
     </el-row>
   </div>
 </template>
+<script>
+
+export default {
+  methods:{
+      lineData(type){
+         this.$emit("echartChage",type)
+      }
+  }
+  
+}
+</script>
+
 
 <style lang="scss" scoped>
 @import "../../../assets/css/basic.scss";
