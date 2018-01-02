@@ -89,6 +89,7 @@ a:hover {
   .rightContent {
     @include prefix-key(flex, 1);
     margin-left: 200px;
+    width:0;
     .hamburger-container {
       line-height: 50px;
       height: 100%;

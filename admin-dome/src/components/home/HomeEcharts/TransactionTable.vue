@@ -1,19 +1,19 @@
 <template>
-  <el-table
-    :data="tableData"
-    :row-class-name="tableRowClassName">
-    <el-table-column
-      prop="order_no"
-      label="order_no"
-      width="100" show-overflow-tooltip>
+  <el-table :data="tableData" :row-class-name="tableRowClassName">
+    <el-table-column align="center" label='order_no' width="100" show-overflow-tooltip>
+        <template slot-scope="scope">
+          {{scope.row.order_no}}
+        </template>
     </el-table-column>
-    <el-table-column
-      prop="price"
-      label="price">
+    <el-table-column align="center" label='price' width="100">
+        <template slot-scope="scope">
+          {{scope.row.price}}
+        </template>
     </el-table-column>
-    <el-table-column
-      prop="status"
-      label="status">
+    <el-table-column align="center" label='status'>
+        <template slot-scope="scope">
+          {{scope.row.status}}
+        </template>
     </el-table-column>
   </el-table>
 </template>
@@ -42,12 +42,9 @@ export default {
   methods: {
     fetchData() {
       let _this = this;
-      this.$http
-        .get("transaction.json")
-        .then(function(res) {
-          _this.tableData = res.data.list;
-        })
-        .catch(function(res) {
+      this.$http.get("transaction.json").then(function(res) {
+          _this.tableData = res.data.list;        
+        }).catch(function(res) {
           console.log(res);
         });
     },

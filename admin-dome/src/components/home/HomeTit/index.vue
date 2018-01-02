@@ -8,7 +8,7 @@
                         <icon name="home_person" class="home_person_icon"></icon>
                    </div>
                 </div>
-                <div class="content">
+                <div class="content hidden-xs-only">
                     <p>New Visits</p>
                     <p>1021,34</p>
                 </div>
@@ -21,7 +21,7 @@
                         <icon name="home_message" class="home_person_icon"></icon>
                    </div>
                 </div>
-                <div class="content">
+                <div class="content hidden-xs-only">
                     <p>New Message</p>
                     <p>2431,4</p>
                 </div>
@@ -34,7 +34,7 @@
                         <icon name="home_rmb" class="home_person_icon"></icon>
                    </div>
                 </div>
-                <div class="content">
+                <div class="content hidden-xs-only">
                     <p>New Person</p>
                     <p>1021,334</p>
                 </div>
@@ -47,7 +47,7 @@
                         <icon name="home_cart" class="home_person_icon"></icon>
                    </div>
                 </div>
-                <div class="content">
+                <div class="content hidden-xs-only">
                     <p>New Cart</p>
                     <p>1041,34</p>
                 </div>
@@ -113,5 +113,10 @@ export default {
       }
     }
   }
+}
+@media only screen and (max-width:767px){
+   .home-tit .home-tit-box .icon{
+        width:100%;
+    }
 }
 </style>

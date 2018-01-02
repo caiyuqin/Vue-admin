@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     initCharts() {
-      let _this=this;
+      let  _this=this;
       this.chart = echarts.init(this.$el, "macarons");
       this.setOptions();
       this.__resizeHanlder = debounce(() => {
